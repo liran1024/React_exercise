@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+<div id="container">
+
+
+
+</div>
+
+<script type="text/babel">
+    /// 需求：渲染一行标题，显示“Hello, world!”
+
+    /*
+     创建一个组件类，用于输出“Hello, world!”
+
+     1.react中创建的组件类以大写字母开头，驼峰命名法；
+     2.在react中使用react，createClass方法创建一个组件类；
+     3.核心代码：每个组件类都必须实现自己的render方法，输出定义好的组件模板，返回值：null、false、组件模板；
+     4.注意：组件类只能包含一个顶层标签
+
+    */
+
+    var HelloMessage = React.createClass({
+        render:function () {
+            return <h1>你好啊！</h1>;
+        }
+    })
+
+
+    ReactDOM.render(
+        <HelloMessage/>,
+        document.getElementById("container")
+    )
+</script>
+</body>
+</html>

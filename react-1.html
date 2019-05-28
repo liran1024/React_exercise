@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+<div id="container">
+
+
+
+</div>
+
+<script type="text/babel">
+    // ReactDOM.render(
+    //     <h1>Hello, world!</h1>,
+    //     document.getElementById('container')
+    // );
+
+    // 需求：JSX入门
+    // 渲染一行标题，显示“Hello, world!”
+
+    //1.JSX必须借助react环境运行
+
+    /*
+     2.JSX标签其实就是html标签，只不过我们在javascript中书写这些标签的时候，不用使用“”括起来，可以像xml一样书写
+     ReactDOM.render(
+     <h1>Hello, world!</h1>,
+     document.getElementById('container')
+     );
+
+     */
+
+    // 3.转换：JSX语法能够让我们更加直观的看到dom结构，不能直接在浏览器上运行，最终会转换成javascript代码
+     var child1 = React.createElement('li', { className: 'cc' }, 'First Text Content');
+     var child2 = React.createElement('li', null, 'Second Text Content');
+     var child3 = React.createElement('li', null, 'Third Text Content');
+     var root = React.createElement('ul', { className: 'my-list' }, [child1, child2, child3]);
+     ReactDOM.render(
+     root,
+     document.getElementById('container')
+     );
+
+
+
+
+    /*
+     4.在 JSX 中使用 JavaScript 表达式。表达式写在花括号 {} 中
+     var text = "啊哈哈";
+     ReactDOM.render(
+     <h1>{text}</h1>,
+     document.getElementById('container')
+     );
+
+
+     */
+
+</script>
+</body>
+</html>
